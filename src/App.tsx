@@ -41,12 +41,4 @@ const router = createBrowserRouter([
   },
 ]);
 
-const rootElement = document.getElementById('app')!;
-if (!rootElement) {
-  throw new Error("Root element with id 'app' not found");
-}
-
-createRoot(document.querySelector('#app')!).render(
-  <RouterProvider router={router} />,
-);
 export default App;
