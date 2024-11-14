@@ -1,4 +1,5 @@
-import { MapItem } from './MapItem';
+import { MapItem } from '../../Components/LocationMap/MapItem';
+
 export const locationsData: MapItem[] = [
   {
     state: 'Slovakia',

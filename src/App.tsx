@@ -20,10 +20,10 @@ function App() {
       </header>
 
       <div className="buttons">
-        <Link to="/Pages/ShopsAroundPage/ShopsAroundPage">
-          <div className="button">Package-free shops around</div>
+        <Link to="/Pages/ShopsAroundPage/ShopsAroundPage" className="button">
+          Package-free shops around
         </Link>
-        <div className="button">Differencies in Separation </div>
+        <button className="button">Differencies in Separation </button>
         <div className="button">Test Your Life-style</div>
       </div>
     </div>
