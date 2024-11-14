@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import './App.css';
+import { ShopsAroundPage } from './Pages/ShopsAroundPage/ShopsAroundPage';
 
 function App() {
   return (
@@ -18,12 +20,33 @@ function App() {
       </header>
 
       <div className="buttons">
-        <div className="button">Package-free shops around</div>
+        <Link to="/Pages/ShopsAroundPage/ShopsAroundPage">
+          <div className="button">Package-free shops around</div>
+        </Link>
         <div className="button">Differencies in Separation </div>
         <div className="button">Test Your Life-style</div>
       </div>
     </div>
   );
 }
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
 
+  {
+    path: '/Pages/ShopsAroundPage/ShopsAroundPage',
+    element: <ShopsAroundPage />,
+  },
+]);
+
+const rootElement = document.getElementById('app')!;
+if (!rootElement) {
+  throw new Error("Root element with id 'app' not found");
+}
+
+createRoot(document.querySelector('#app')!).render(
+  <RouterProvider router={router} />,
+);
 export default App;
