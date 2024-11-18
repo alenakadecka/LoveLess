@@ -6,4 +6,5 @@ export interface MapItem {
     lng: number;
     lat: number;
   };
+  description: string;
 }

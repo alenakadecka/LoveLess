@@ -14,31 +14,24 @@ function App() {
         </p>
         <p>
           Dear visitor, welcome at Webpage about your new life-style. You can
-          find here information about minimalism, ecology and package-free ways
-          of living.
+          find here information about minimalism, ecology and zero-waste ways of
+          living.
         </p>
       </header>
 
       <div className="buttons">
         <Link to="/Pages/ShopsAroundPage/ShopsAroundPage" className="button">
-          Package-free shops around
+          Zero-Waste Shops Around
         </Link>
-        <button className="button">Differencies in Separation </button>
-        <div className="button">Test Your Life-style</div>
+        <Link to="/Pages/SeparateWastePage/" className="button">
+          Differencies in Separation
+        </Link>
+        <Link to="/Pages/TestYourLifeStylePage/" className="button">
+          Test Your Life-style
+        </Link>
       </div>
     </div>
   );
 }
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-
-  {
-    path: '/Pages/ShopsAroundPage/ShopsAroundPage',
-    element: <ShopsAroundPage />,
-  },
-]);
 
 export default App;

@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import { MapItem } from './MapItem';
 
@@ -9,34 +9,38 @@ interface LocationMapsProps {
 export function LocationMap({ items }: LocationMapsProps) {
   //komponenta obsahuje logiku pre mapu
   return (
-    <MapContainer
-      center={[51.505, -0.09]}
-      zoom={13}
-      scrollWheelZoom={false}
-      style={{ height: '90vh', width: '90vw' }}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={[51.505, -0.09]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
-  );
+    <>
+      <div className="introduction">
+        {
+          'Here are the most visited and best rated zero waste shops in the City.'
+        }
+      </div>
+      <div className="buttons">
+        <button>Bratislava</button>
+        <button>Brno</button>
+        <button>Praha</button>
+      </div>
+      <MapContainer
+        center={[48.1503816, 17.1061185]}
+        zoom={13}
+        scrollWheelZoom={false}
+        style={{ height: '90vh', width: '90vw' }}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-  return (
-    <div>
-      {items.map((item, index) => (
-        <div key={index}>
-          <h3>{item.name}</h3>
-          <p>
-            {item.city}, {item.state}
-          </p>
-          <p>
-            Coordinates: {item.coordinates.lat}, {item.coordinates.lng}
-          </p>
-        </div>
-      ))}
-    </div>
+        {items.map((item, index) => (
+          <Marker
+            key={index}
+            position={[item.coordinates.lat, item.coordinates.lng]}
+          >
+            <Popup>
+              <strong>{item.name}</strong>
+              <br />
+              {item.description}
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </>
   );
 }
