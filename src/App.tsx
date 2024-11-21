@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import './App.css';
 import { ShopsAroundPage } from './Pages/ShopsAroundPage/ShopsAroundPage';
 
-function App() {
+export function App() {
   return (
     <div className="App">
       <header className="App-header">

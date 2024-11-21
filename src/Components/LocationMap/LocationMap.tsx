@@ -1,45 +1,61 @@
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { marker, featureGroup } from 'leaflet';
+import React, { useEffect, useState } from 'react';
 import { MapItem } from './MapItem';
 
 interface LocationMapsProps {
   items: MapItem[];
+  filteredItems: MapItem[];
 }
 
-export function LocationMap({ items }: LocationMapsProps) {
+function LocationMapInner({ items, filteredItems }: LocationMapsProps) {
+  const map = useMap();
+
+  useEffect(() => {
+    const markerArray = filteredItems.map((item) =>
+      marker([item.coordinates.lat, item.coordinates.lng]),
+    );
+    map.invalidateSize();
+    const group = featureGroup(markerArray);
+
+    map.fitBounds(group.getBounds());
+  }, [map, filteredItems]);
+
+  return (
+    <>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+      {items.map((item, index) => (
+        <Marker
+          key={index}
+          position={[item.coordinates.lat, item.coordinates.lng]}
+        >
+          <Popup>
+            <strong>{item.name}</strong>
+            <br />
+            {item.description}
+          </Popup>
+        </Marker>
+      ))}
+    </>
+  );
+}
+
+export function LocationMap({
+  items,
+
+  filteredItems,
+}: LocationMapsProps) {
   //komponenta obsahuje logiku pre mapu
   return (
     <>
-      <div className="introduction">
-        {
-          'Here are the most visited and best rated zero waste shops in the City.'
-        }
-      </div>
-      <div className="buttons">
-        <button>Bratislava</button>
-        <button>Brno</button>
-        <button>Praha</button>
-      </div>
       <MapContainer
-        center={[48.1503816, 17.1061185]}
-        zoom={13}
+        center={[0, 0]}
+        zoom={0}
         scrollWheelZoom={false}
         style={{ height: '90vh', width: '90vw' }}
       >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-        {items.map((item, index) => (
-          <Marker
-            key={index}
-            position={[item.coordinates.lat, item.coordinates.lng]}
-          >
-            <Popup>
-              <strong>{item.name}</strong>
-              <br />
-              {item.description}
-            </Popup>
-          </Marker>
-        ))}
+        <LocationMapInner items={items} filteredItems={filteredItems} />
       </MapContainer>
     </>
   );
