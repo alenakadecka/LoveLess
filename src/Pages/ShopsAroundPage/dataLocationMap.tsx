@@ -32,10 +32,18 @@ export const locationsData: MapItem[] = [
   {
     state: 'Czech Republic',
     city: 'Brno',
-    name: 'NOsáček',
-    coordinates: { lat: 49.2008887, lng: 16.60052 },
+    name: 'Zero Way',
+    coordinates: { lat: 49.224607, lng: 16.5879237 },
     description: 'Zero-Waste Shop, Brno',
   },
+  {
+    state: 'Czech Republic',
+    city: 'Brno',
+    name: 'Brána ke zdraví (ekodrogerie)',
+    coordinates: { lat: 49.1938855, lng: 16.6093057 },
+    description: 'Zero-Waste Shop, Brno',
+  },
+
   {
     state: 'Czech Republic',
     city: 'Praha',
@@ -48,6 +56,13 @@ export const locationsData: MapItem[] = [
     city: 'Praha',
     name: 'Nebaleno',
     coordinates: { lat: 50.0648673, lng: 14.4273828 },
+    description: 'Zero-Waste Shop, Praha',
+  },
+  {
+    state: 'Czech Republic',
+    city: 'Praha',
+    name: 'Naber si - bez obalu',
+    coordinates: { lat: 50.1031572, lng: 14.3908365 },
     description: 'Zero-Waste Shop, Praha',
   },
 ];
