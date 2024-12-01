@@ -16,10 +16,6 @@ export function ShopsAroundPage() {
 
   return (
     <div>
-      <LocationMap
-        items={locationsData}
-        filteredItems={filteredItems}
-      ></LocationMap>
       {allCities.map((city) => {
         return (
           <button
@@ -31,6 +27,11 @@ export function ShopsAroundPage() {
           </button>
         );
       })}
+
+      <LocationMap
+        items={locationsData}
+        filteredItems={filteredItems}
+      ></LocationMap>
     </div>
   );
 }
