@@ -16,6 +16,13 @@ export const locationsData: MapItem[] = [
     description: 'A Zero-Waste Shop, Bratislava',
   },
   {
+    state: 'Slovakia',
+    city: 'Bratislava',
+    name: 'Petržalka bez odpadu',
+    coordinates: { lat: 48.1156789, lng: 17.1043002 },
+    description: 'A Zero-Waste Shop, Bratislava',
+  },
+  {
     state: 'Czech Republic',
     city: 'Brno',
     name: 'Nasyp si',
@@ -42,6 +49,20 @@ export const locationsData: MapItem[] = [
     name: 'Brána ke zdraví (ekodrogerie)',
     coordinates: { lat: 49.1938855, lng: 16.6093057 },
     description: 'Zero-Waste Shop, Brno',
+  },
+  {
+    state: 'Czech Republic',
+    city: 'Olomouc',
+    name: 'GRAM bezobalový obchod',
+    coordinates: { lat: 49.5955956, lng: 17.2402825 },
+    description: 'Zero-Waste Shop, Olomouc',
+  },
+  {
+    state: 'Czech Republic',
+    city: 'Olomouc',
+    name: 'EKO KOUTEK',
+    coordinates: { lat: 49.5849477, lng: 17.2504889 },
+    description: 'Zero-Waste Shop, Olomouc',
   },
 
   {
