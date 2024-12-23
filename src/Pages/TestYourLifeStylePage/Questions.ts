@@ -6,7 +6,7 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       { text: 'yes', value: 1 },
-      { text: 'sometimes', value: 1 },
+      { text: 'sometimes', value: 0.5 },
       { text: 'no', value: 0 },
     ],
   },
@@ -15,7 +15,7 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       { text: 'yes, I go whenever possible', value: 1 },
-      { text: 'sometimes, not much often', value: 1 },
+      { text: 'sometimes, not much often', value: 0.5 },
       { text: 'no, nor do I plan to', value: 0 },
     ],
   },
@@ -24,7 +24,7 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       { text: 'yes', value: 1 },
-      { text: 'sometimes', value: 1 },
+      { text: 'sometimes', value: 0.5 },
       { text: 'no, never', value: 0 },
     ],
   },
@@ -36,7 +36,7 @@ export const questions: Question[] = [
         text: 'I always consider whether I really need it or use it',
         value: 1,
       },
-      { text: 'I buy a lot, but I am trying to work on that', value: 1 },
+      { text: 'I buy a lot, but I am trying to work on that', value: 0.5 },
       {
         text: 'I always consider whether I really need it or use it',
         value: 0,
@@ -52,8 +52,8 @@ export const questions: Question[] = [
         text: 'yes, I almost always use only public transport or bicycle',
         value: 1,
       },
-      { text: 'it is "50/50"', value: 1 },
-      { text: 'no, I use the most my private car', value: 0 },
+      { text: 'It is "50/50".', value: 0.5 },
+      { text: 'No, I use  my private car the most.', value: 0 },
     ],
   },
   {
@@ -61,11 +61,11 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       {
-        text: 'yes, I have many hacks to save the water',
+        text: 'Yes, I have many hacks to save the water.',
         value: 1,
       },
-      { text: 'I try, but I always waste a lot', value: 1 },
-      { text: 'Unfotunately, not at all', value: 0 },
+      { text: 'I try, but I always waste a lot.', value: 0.5 },
+      { text: 'Unfotunately, not at all.', value: 0 },
     ],
   },
   {
@@ -74,10 +74,10 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       {
-        text: 'yes, used it almost daily. I own my reused set.',
+        text: 'Yes, I use it almost daily. I own my reused set.',
         value: 1,
       },
-      { text: 'yes, but I only to start using it.', value: 1 },
+      { text: 'Yes, but I only to start using it.', value: 0.5 },
       { text: 'I have no idea, that something like this exists.', value: 0 },
     ],
   },
@@ -87,15 +87,89 @@ export const questions: Question[] = [
     weight: 1,
     answers: [
       {
-        text: 'yes, certainly, always.',
+        text: 'Yes, certainly, always.',
         value: 1,
       },
       {
-        text: 'often I try, but to the lack of energy and time I mostly throw the clutter away.',
-        value: 1,
+        text: 'I try very often, but to the lack of energy and time I mostly throw the clutter away.',
+        value: 0.5,
       },
       {
         text: 'Not at all. I am thankfull that I am able to throw away something.',
+        value: 0,
+      },
+    ],
+  },
+  {
+    question:
+      'Do you have favourite eco-friendly product brands that you like to buy?',
+    weight: 1,
+    answers: [
+      {
+        text: 'Yes, I have a few.',
+        value: 1,
+      },
+      {
+        text: 'Yes, but I am not so faithuful to buy the eco-friendly brands always.',
+        value: 0.5,
+      },
+      {
+        text: 'Not at all.',
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: 'Do you make your own chemical-free cleaning products at home?',
+    weight: 1,
+    answers: [
+      {
+        text: 'Yes, I have made a few',
+        value: 1,
+      },
+      {
+        text: 'Sometimes.',
+        value: 0.5,
+      },
+      {
+        text: 'Not at all.',
+        value: 0,
+      },
+    ],
+  },
+  {
+    question: 'Do you use cloth or paper tissues?',
+    weight: 1,
+    answers: [
+      {
+        text: 'Always cloth tissues.',
+        value: 1,
+      },
+      {
+        text: 'Both types. But paper tissues from recyclated paper.',
+        value: 0.5,
+      },
+      {
+        text: 'Only the paper tissues.',
+        value: 0,
+      },
+    ],
+  },
+  {
+    question:
+      'Do you know where there is a second-hand shop in your area with  items for a symbolic price?',
+    weight: 1,
+    answers: [
+      {
+        text: 'Yes, I go there regularly.',
+        value: 1,
+      },
+      {
+        text: 'Yes, I have an idea. I plan to go there someday.',
+        value: 0.5,
+      },
+      {
+        text: 'No, i do not know about these shops at all.',
         value: 0,
       },
     ],
