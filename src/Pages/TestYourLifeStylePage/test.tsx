@@ -1,34 +1,63 @@
-import { useCallback, useState } from 'react';
-import { questions } from './Questions';
+export {};
 
-const Formular = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
+// import { useCallback, useState } from 'react';
+// import { questions } from './Questions';
 
-  const onNext = useCallback(() => {
-    // Get answer from somewhere
-    const answer = 0;
+// const Formular = () => {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [answers, setAnswers] = useState<number[]>([]);
 
-    // Store answer index
-    setAnswers((prevValue) => {
-      // Pokrocile
-      // array.push() ale immutable
-      return [...prevValue, answer];
-    });
+//   const onNext = useCallback(() => {
+//     // Get answer from somewhere
+//     const answer = 0;
 
-    setCurrentIndex((prev) => prev + 1);
-  }, []);
+//     // Store answer index
+//     setAnswers((prevValue) => {
+//       // Pokrocile
+//       // array.push() ale immutable
+//       return [...prevValue, answer];
+//     });
 
-  const answerValues = answers.map((answerIndex, questionIndex) => {
-    return questions[questionIndex].answers[answerIndex].value;
-  });
+//     setCurrentIndex((prev) => prev + 1);
+//   }, []);
 
-  // Pokrocile
-  const totalScore = answerValues.reduce((a, b) => a + b, 0);
+//   const answerValues = answers.map((answerIndex, questionIndex) => {
+//     return questions[questionIndex].answers[answerIndex].value;
+//   });
 
-  const percenta = totalScore / questions.length;
+//   // Pokrocile
+//   const totalScore = answerValues.reduce((a, b) => a + b, 0);
 
-  const currentQuestion = questions[currentIndex];
+//   const percenta = totalScore / questions.length;
 
-  return <div>sem pojde logika html</div>;
-};
+//   const currentQuestion = questions[currentIndex];
+
+//   if (currentIndex >= questions.length) {
+//     // When all questions are answered
+//     return (
+//       <div>
+//         <h1>Test Completed</h1>
+//         <p>Your total score is: {totalScore}</p>
+//         <p>Percentage: {percenta.toFixed(2)}%</p>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div>
+//       <div>
+//         <h1>Test Your LifeStyle</h1>
+//         <div>
+//           <h2>{currentQuestion.question}</h2>
+//           <ul>
+//             {currentQuestion.answers.map((answers, index) => (
+//               <li key={index}>
+//                 <button onClick={() => onNext()}>{answers.text}</button>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

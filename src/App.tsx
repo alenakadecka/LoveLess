@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import './App.css';
 import { ShopsAroundPage } from './Pages/ShopsAroundPage/ShopsAroundPage';
+import { TestYourLifeStylePage } from './Pages/TestYourLifeStylePage/TestYourLifeStylePage';
 
 export function App() {
   return (
@@ -26,7 +27,10 @@ export function App() {
         <Link to="/Pages/SeparateWastePage/" className="button">
           Differencies in Separation
         </Link>
-        <Link to="/Pages/TestYourLifeStylePage/" className="button">
+        <Link
+          to="/Pages/TestYourLifeStylePage/TestYourLifeStylePage"
+          className="button"
+        >
           Test Your Life-style
         </Link>
       </div>

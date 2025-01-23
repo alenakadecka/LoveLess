@@ -157,7 +157,7 @@ export const questions: Question[] = [
   },
   {
     question:
-      'Do you know where there is a second-hand shop in your area with  items for a symbolic price?',
+      'Do you know where there is a second-hand shop in your area with items for a symbolic price?',
     weight: 1,
     answers: [
       {
