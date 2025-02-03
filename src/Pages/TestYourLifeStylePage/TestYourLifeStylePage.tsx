@@ -45,11 +45,15 @@ export function TestYourLifeStylePage(): JSX.Element {
     return (
       <div>
         {currentIndex < questions.length ? (
-          <div>
+          <div className="questiontext">
             <h1>{currentQuestion.question}</h1>
             <div>
               {currentQuestion.answers.map((answer, index) => (
-                <button key={index} onClick={() => onNext(index)}>
+                <button
+                  className="answertext"
+                  key={index}
+                  onClick={() => onNext(index)}
+                >
                   {answer.text}
                 </button>
               ))}

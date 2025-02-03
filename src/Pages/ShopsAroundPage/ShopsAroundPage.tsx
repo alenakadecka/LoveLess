@@ -16,17 +16,23 @@ export function ShopsAroundPage() {
 
   return (
     <div>
-      {allCities.map((city) => {
-        return (
-          <button
-            onClick={() => {
-              setCity(city);
-            }}
-          >
-            {city}
-          </button>
-        );
-      })}
+      <div className="mb-3">
+        <label htmlFor="cityDropdown" className="form-label">
+          Select a City
+        </label>
+        <select
+          id="cityDropdown"
+          className="form-select"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        >
+          {allCities.map((cityOption) => (
+            <option key={cityOption} value={cityOption}>
+              {cityOption}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <LocationMap
         items={locationsData}
