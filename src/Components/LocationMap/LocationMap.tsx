@@ -1,6 +1,6 @@
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import { marker, featureGroup } from 'leaflet';
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { MapItem } from './MapItem';
 
 interface LocationMapsProps {

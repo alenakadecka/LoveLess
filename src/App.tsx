@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { TipsZeroWastePage } from './Pages/TipsZeroWastePage/TipsZeroWastePage';
 
 function App() {
   return (

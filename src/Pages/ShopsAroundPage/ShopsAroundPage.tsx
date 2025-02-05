@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LocationMap } from '../../Components/LocationMap/LocationMap';
-import { MapItem } from '../../Components/LocationMap/MapItem';
+
 import { locationsData } from './dataLocationMap';
 
 export function ShopsAroundPage() {
