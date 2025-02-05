@@ -28,11 +28,11 @@ export function TipsZeroWastePage() {
           border: '1px solid #ccc',
           padding: '10px',
           margin: '10px',
-          width: '200px',
+          width: 'auto',
           color: '#ffffff',
           textAlign: 'center',
           backgroundColor: '#16274f',
-          borderRadius: '10px',
+          borderRadius: '15px',
         }}
       >
         {flipped ? (
@@ -40,12 +40,15 @@ export function TipsZeroWastePage() {
             <img
               src={backImage}
               alt={`Back of EcoTip ${number}`}
-              style={{ width: '100px', height: '100px', borderRadius: '10px' }}
+              style={{
+                width: '70%',
+                height: 'auto',
+                borderRadius: '15px',
+                margin: '10px',
+              }}
             />
-            <p>{number}</p>
-            <h5 className="title" style={{ color: 'ffffff' }}>
-              {title}
-            </h5>
+            <p style={{ fontWeight: 'bold' }}>{number}</p>
+            <h5 style={{ color: 'ffffff' }}>{title}</h5>
             <p>{description}</p>
           </div>
         ) : (
@@ -53,9 +56,14 @@ export function TipsZeroWastePage() {
             <img
               src={frontImage}
               alt={`Front of EcoTip ${number}`}
-              style={{ width: '100px', height: '100px', borderRadius: '10px' }}
+              style={{
+                width: '70%',
+                height: 'auto',
+                borderRadius: '15px',
+                margin: '10px',
+              }}
             />
-            <p>{number}</p>
+            <p style={{ fontWeight: 'bold' }}>{number}</p>
           </div>
         )}
       </div>

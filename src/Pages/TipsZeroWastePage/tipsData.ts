@@ -13,7 +13,7 @@ export const ecoTip: EcoTip[] = [
     number: 2,
     title: 'The Chemicals at Home',
     frontImage: '/images/ecotips/2a.jpg',
-    backImage: '/images/ecotips/2ba.jpg',
+    backImage: '/images/ecotips/2b.jpg',
     description:
       'Make your own cleaning products at home instead of the ones bought and containing a lot of unhealthy chemicals. Use vinegar, citric acid and baking soda. You will not only save money. You will protect your health.',
   },
