@@ -6,6 +6,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ShopsAroundPage } from './Pages/ShopsAroundPage/ShopsAroundPage';
 import { TestYourLifeStylePage } from './Pages/TestYourLifeStylePage/TestYourLifeStylePage';
+import { TipsZeroWastePage } from './Pages/TipsZeroWastePage/TipsZeroWastePage';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/Pages/TestYourLifeStylePage/TestYourLifeStylePage',
     element: <TestYourLifeStylePage />,
+  },
+  {
+    path: '/Pages/TipsZeroWastePage/TipsZeroWastePage',
+    element: <TipsZeroWastePage />,
   },
 ]);
 

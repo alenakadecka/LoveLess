@@ -26,6 +26,7 @@ export function TestYourLifeStylePage(): JSX.Element {
 
     // Pokrocile
     const totalScore = answerValues.reduce((a, b) => a + b, 0);
+    const maximumScore = 18;
 
     const percenta = totalScore / questions.length;
 
@@ -35,9 +36,11 @@ export function TestYourLifeStylePage(): JSX.Element {
       return (
         <div>
           <h1>Congratulations!</h1>
-          <p>Your score is: {totalScore}</p>
+          <p>
+            Your score is: {totalScore} of {maximumScore}
+          </p>
           <p>Your percentage: {(percenta * 100).toFixed(2)}%</p>
-          <p>Description will be there</p>
+          <p>You are on a very Good Road to Zero-Waste Life Style.</p>
         </div>
       );
     };

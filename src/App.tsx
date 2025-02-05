@@ -1,12 +1,9 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { ShopsAroundPage } from './Pages/ShopsAroundPage/ShopsAroundPage';
-import { TestYourLifeStylePage } from './Pages/TestYourLifeStylePage/TestYourLifeStylePage';
+import { TipsZeroWastePage } from './Pages/TipsZeroWastePage/TipsZeroWastePage';
 
-export function App() {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,19 +20,22 @@ export function App() {
           ways of living.
         </p>
       </header>
-
       <div className="buttons">
         <Link to="/Pages/ShopsAroundPage/ShopsAroundPage" className="button">
           Zero-Waste Shops Around
         </Link>
-        <Link to="/Pages/SeparateWastePage/" className="button">
-          Differencies in Separation
-        </Link>
+
         <Link
           to="/Pages/TestYourLifeStylePage/TestYourLifeStylePage"
           className="button"
         >
           Test Your Life-style
+        </Link>
+        <Link
+          to="/Pages/TipsZeroWastePage/TipsZeroWastePage"
+          className="button"
+        >
+          Eco and Zero-Waste Tips
         </Link>
       </div>
     </div>
