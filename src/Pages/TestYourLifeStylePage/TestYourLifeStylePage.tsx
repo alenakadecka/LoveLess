@@ -49,18 +49,22 @@ export function TestYourLifeStylePage(): JSX.Element {
     return (
       <div>
         {currentIndex < questions.length ? (
-          <div className="questiontext">
-            <h1>{currentQuestion.question}</h1>
-            <div className="answers-buttons">
-              {currentQuestion.answers.map((answer, index) => (
-                <button
-                  className="answertext"
-                  key={index}
-                  onClick={() => onNext(index)}
-                >
-                  {answer.text}
-                </button>
-              ))}
+          <div className="ordering_boxes">
+            <div className="questiontext">
+              <div className="questiontext-headline">
+                <h1>{currentQuestion.question}</h1>
+              </div>
+              <div className="answers-buttons">
+                {currentQuestion.answers.map((answer, index) => (
+                  <button
+                    className="answertext"
+                    key={index}
+                    onClick={() => onNext(index)}
+                  >
+                    {answer.text}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         ) : (
