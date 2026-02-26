@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import { questions } from './Questions';
+import './TestYourLifeStylePage.css';
 
 export function TestYourLifeStylePage(): JSX.Element {
   const Formular = () => {
@@ -50,7 +51,7 @@ export function TestYourLifeStylePage(): JSX.Element {
         {currentIndex < questions.length ? (
           <div className="questiontext">
             <h1>{currentQuestion.question}</h1>
-            <div>
+            <div className="answers-buttons">
               {currentQuestion.answers.map((answer, index) => (
                 <button
                   className="answertext"

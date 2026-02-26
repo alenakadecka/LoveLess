@@ -6,6 +6,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="head-tool-bar">
+          {' '}
+          <button className="login-button">Login</button>
+        </div>
         <p className="headline">
           LOVE LESS: Your guide to a sustainable lifestyle.
         </p>
@@ -15,8 +19,8 @@ function App() {
           <br />
           welcome at Webpage about your new life-style.
           <br />
-          You can find here information about minimalism, ecology and zero-waste
-          ways of living.
+          You now can enter to the unique world of minimalism, ecology and
+          zero-waste ways of living.
         </p>
       </header>
       <div className="buttons">
